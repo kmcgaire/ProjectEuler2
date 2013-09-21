@@ -1,5 +1,5 @@
 from itertools import permutations
-
+import time
 #Analysis
 #Going through Rule by Rule to reduce the amount of brute force calc needed.
 #since d2d3d4 is divisable by 2, d4 is from the set {0,2,4,6,8}
@@ -41,5 +41,7 @@ def Problem42():
 		if (checkRule2and3(a)): mysum += int(a)
 	return mysum
 
+start = time.time()
 print Problem42()
+print time.time() - start
 
